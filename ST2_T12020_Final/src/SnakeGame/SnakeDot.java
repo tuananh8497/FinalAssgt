@@ -7,7 +7,6 @@ public class SnakeDot {
   int y;
   Color color;
 
-
   public SnakeDot(int x, int y, Color color) {
     super();
     this.x = x;
@@ -17,6 +16,10 @@ public class SnakeDot {
 
   public void asHead() {
     this.color = Color.red;
+  }
+
+  public void getHead() {
+
   }
 
   public void setPos(int x, int y) {
@@ -44,7 +47,7 @@ public class SnakeDot {
     return color;
   }
 
-  public void setC(Color c) {
+  public void setC(Color color) {
     this.color = color;
   }
 
