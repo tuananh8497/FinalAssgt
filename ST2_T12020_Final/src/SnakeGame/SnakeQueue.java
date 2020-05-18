@@ -19,4 +19,5 @@ public class SnakeQueue {
   public void doDrawing(Graphics g) {
 
   }
+
 }
