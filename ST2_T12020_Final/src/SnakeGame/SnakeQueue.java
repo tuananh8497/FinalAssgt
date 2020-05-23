@@ -59,7 +59,7 @@ public class SnakeQueue {
     }
     curr.setNext(snakeDot);
   }
-
+// abc
   public void snakeMove(int dots, boolean left, boolean right, boolean up, boolean down,
       final int SIZE) {
 
