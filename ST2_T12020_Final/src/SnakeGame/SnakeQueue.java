@@ -1,4 +1,4 @@
-//ok
+//dot game
 
 package SnakeGame;
 
@@ -19,5 +19,4 @@ public class SnakeQueue {
   public void snakeMove() {
 	  
   }
-
 }
