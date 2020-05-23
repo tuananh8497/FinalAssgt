@@ -1,4 +1,3 @@
-
 package SnakeGame;
 
 import java.awt.Color;
@@ -10,9 +9,9 @@ import java.util.Queue;
 public class SnakeQueue {
   SnakeDot head = null;
   Queue<SnakeDot> snake = new LinkedList<SnakeDot>();
-  
+
   public void addHead(int x, int y, Color c) {
-    head =  new SnakeDot(x, y, c);
+    head = new SnakeDot(x, y, c);
     snake.add(head);
   }
 
@@ -21,6 +20,7 @@ public class SnakeQueue {
     snake.add(newJoint);
   }
 
+  // currently working on
   public void addTail(Color c) {
     SnakeDot curr = head;
     while (curr.getNext() != null) {
@@ -49,7 +49,7 @@ public class SnakeQueue {
 
   public void addLast(SnakeDot snakeDot) {
     if (head == null) {
-      head =  snakeDot;
+      head = snakeDot;
       return;
     }
 
@@ -59,7 +59,8 @@ public class SnakeQueue {
     }
     curr.setNext(snakeDot);
   }
-// abc
+
+  // abc
   public void snakeMove(int dots, boolean left, boolean right, boolean up, boolean down,
       final int SIZE) {
 
