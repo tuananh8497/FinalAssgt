@@ -6,6 +6,7 @@ public class SnakeDot {
   int x;
   int y;
   Color color;
+  SnakeDot next = null;
 
   public SnakeDot(int x, int y, Color color) {
     super();
@@ -43,7 +44,7 @@ public class SnakeDot {
     this.y = y;
   }
 
-  public Color getC() {
+  public Color getColor() {
     return color;
   }
 
@@ -51,5 +52,11 @@ public class SnakeDot {
     this.color = color;
   }
 
+  public SnakeDot getNext() {
+    return next;
+  }
 
+  public void setNext(SnakeDot dot) {
+    this.next = dot;
+  }
 }

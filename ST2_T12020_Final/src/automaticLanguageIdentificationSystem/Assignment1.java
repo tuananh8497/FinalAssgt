@@ -6,11 +6,13 @@ public class Assignment1 {
 
   public static void main(String[] args) {
     String[] language = {"English", "French", "German", "Italian", "Spanish"};
-    String inputFolder = "Learning\\";
-    String outputFolder = "Models\\";
+    String inputFolder =
+        "C:\\Users\\tuana\\git\\FinalAssgt\\ST2_T12020_Final\\src\\automaticLanguageIdentificationSystem\\Learning\\";
+    String outputFolder =
+        "C:\\Users\\tuana\\git\\FinalAssgt\\ST2_T12020_Final\\src\\automaticLanguageIdentificationSystem\\Models\\";
 
-    ArrayList<String> unknownInput =
-        new ArrayList<String>(Bigram.getBigrams("Testing\\Unknown4.txt"));
+    ArrayList<String> unknownInput = new ArrayList<String>(Bigram.getBigrams(
+        "C:\\Users\\tuana\\git\\FinalAssgt\\ST2_T12020_Final\\src\\automaticLanguageIdentificationSystem\\Testing\\Unknown1.txt"));
 
     ArrayList<Double> probabilityList = new ArrayList<Double>();
 

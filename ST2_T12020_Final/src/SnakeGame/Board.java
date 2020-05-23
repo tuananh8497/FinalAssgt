@@ -24,7 +24,7 @@ public class Board extends JPanel implements ActionListener {
   private final int RAND_POS = 29;
   private final int DELAY = 140;
 
-  private SnakeLinkedList snake = new SnakeLinkedList();
+  private SnakeQueue snake = new SnakeQueue ();
   private Color[] colours = {Color.BLUE, Color.YELLOW, Color.GREEN};
 
   private int dots;
@@ -101,12 +101,12 @@ public class Board extends JPanel implements ActionListener {
 
       for (int z = 0; z < dots; z++) {
         if (z == 0) {
-          SnakeNode head = snake.getHead();
+          SnakeDot head = snake.getHead();
           g.setColor(head.getColor());
           g.fillOval(head.getX(), head.getY(), DOT_SIZE, DOT_SIZE);
           snake.addTail(colours[z]);
         } else {
-          SnakeNode joint = snake.getJoint(z);
+          SnakeDot joint = snake.getJoint(z);
           g.setColor(joint.getColor());
           g.fillOval(joint.getX(), joint.getY(), DOT_SIZE, DOT_SIZE);
           snake.addTail(colours[z % 3]);
