@@ -1,3 +1,4 @@
+
 package SnakeGame;
 
 import java.awt.Color;
@@ -90,5 +91,4 @@ public class SnakeQueue {
       head.setY(getHead().getY() + SIZE);
     }
   }
-
 }
