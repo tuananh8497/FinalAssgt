@@ -1,12 +1,12 @@
 package SnakeGame;
 
 import java.awt.Color;
+import java.util.Queue;
 
 public class SnakeDot {
   int x;
   int y;
   Color color;
-
 
   public SnakeDot(int x, int y, Color color) {
     super();

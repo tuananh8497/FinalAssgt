@@ -24,7 +24,7 @@ public class Board extends JPanel implements ActionListener {
   private final int RAND_POS = 29;
   private final int DELAY = 140;
 
-  private SnakeLinkedList snake = new SnakeLinkedList();
+  private SnakeQueue snake = new SnakeQueue ();
   private Color[] colours = {Color.BLUE, Color.YELLOW, Color.GREEN};
 
   private int dots;
