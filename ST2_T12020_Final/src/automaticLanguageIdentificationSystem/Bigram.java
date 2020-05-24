@@ -53,8 +53,8 @@ public class Bigram {
     System.out.println(extract); // Correct
     ArrayList<String> bigrams = new ArrayList<String>();
     for (int i = 0; i < extract.size(); i++) {
-      for (int x = 0; x < extract.get(i).length() - 1; x++) {
-        bigrams.add(extract.get(i).substring(x, x + 2));
+      for (int x = 0; x < extract.get(i).length() - 2; x++) {
+        bigrams.add(extract.get(i).substring(x, x + 3));
       }
     }
     return bigrams;
@@ -66,8 +66,8 @@ public class Bigram {
     ArrayList<String> bigramExtract = FileProcessing.extractWords(sTemp, Locale.getDefault());
     ArrayList<String> list = new ArrayList<String>();
     for (int i = 0; i < bigramExtract.size() - 1; i++) {
-      for (int x = 0; x < bigramExtract.get(i).length() - 1; x++) {
-        list.add(bigramExtract.get(i).substring(x, x + 2));
+      for (int x = 0; x < bigramExtract.get(i).length() - 2; x++) {
+        list.add(bigramExtract.get(i).substring(x, x + 3));
       }
     }
     String result = sortCountBigrams(list);
@@ -84,9 +84,9 @@ public class Bigram {
     while (first < last) { // test for nonempty sublist
       mid = (first + last) / 2;
       midvalue = arr.get(mid);
-      if (midvalue.substring(0, 2).contains(target)) {
+      if (midvalue.substring(0, 3).contains(target)) {
         return midvalue; // have a match
-      } else if (target.compareTo(midvalue.substring(0, 2)) < 0) {
+      } else if (target.compareTo(midvalue.substring(0, 3)) < 0) {
         last = mid; // search lower sublist. Reset last
       } else {
         first = mid + 1; // search upper sublist. Reset first

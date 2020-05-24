@@ -12,7 +12,7 @@ public class Assignment1 {
         "C:\\Users\\tuana\\git\\FinalAssgt\\ST2_T12020_Final\\src\\automaticLanguageIdentificationSystem\\Models\\";
 
     ArrayList<String> unknownInput = new ArrayList<String>(Bigram.getBigrams(
-        "C:\\Users\\tuana\\git\\FinalAssgt\\ST2_T12020_Final\\src\\automaticLanguageIdentificationSystem\\Testing\\Unknown1.txt"));
+        "C:\\Users\\tuana\\git\\FinalAssgt\\ST2_T12020_Final\\src\\automaticLanguageIdentificationSystem\\Testing\\Unknown4.txt"));
 
     ArrayList<Double> probabilityList = new ArrayList<Double>();
 

@@ -13,7 +13,7 @@ public class LanguageIdentification {
       String element =
           Bigram.binarySearchBigrams(language, 0, language.size(), unknownInput.get(i));
       if (element.compareTo("Item not found") != 0) {
-        score = score * Double.parseDouble(element.substring(3));
+        score = score * Double.parseDouble(element.substring(4));
       } else {
         score = score * 0;
       }
