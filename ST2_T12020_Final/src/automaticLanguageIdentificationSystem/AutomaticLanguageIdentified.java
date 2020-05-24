@@ -3,7 +3,7 @@ package automaticLanguageIdentificationSystem;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class Assignment1 {
+public class AutomaticLanguageIdentified {
 
   public static void main(String[] args) {
     String[] language = {"English", "French", "German", "Italian", "Spanish"};
@@ -31,6 +31,5 @@ public class Assignment1 {
     String identifiedLanguage = LanguageIdentification.identifyLanguage(probabilityList, language);
     System.out.println(probabilityList);
     System.out.println(identifiedLanguage);
-
   }
 }
