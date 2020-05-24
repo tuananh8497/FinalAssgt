@@ -2,18 +2,20 @@ package automaticLanguageIdentificationSystem;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Hashtable;
 
 public class LanguageIdentification {
 
   // sort and count probability of Bigrams method
   public static double calculateProbability(ArrayList<String> unknownInput,
-      ArrayList<String> language) {
+      Hashtable<String, String> language) {
     double score = 1; // declare score
     for (int i = 0; i < unknownInput.size(); i++) {
-      String element =
-          Bigram.binarySearchBigrams(language, 0, language.size(), unknownInput.get(i));
+      // String element = Trigram.searchTrigrams(language, 0, language.size(), unknownInput.get(i));
+      String element = Trigram.searchTrigrams(language, unknownInput.get(i));
       if (element.compareTo("Item not found") != 0) {
-        score = score * Double.parseDouble(element.substring(4));
+        // score = score * Double.parseDouble(element.substring(4));
+        score = score * Double.parseDouble(element);
       } else {
         score = score * 0;
       }

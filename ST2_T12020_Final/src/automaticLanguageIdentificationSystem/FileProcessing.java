@@ -12,6 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Hashtable;
 import java.util.Locale;
 
 public class FileProcessing {
@@ -50,18 +51,24 @@ public class FileProcessing {
       start = end;
       end = wordIterator.next();
     }
+    Collections.sort(wordList);
     return wordList;
   }
 
   // outputWordsToUTF8File method
-  public static void outputWordsToUTF8File(String filePath, ArrayList wordList) {
+  public static void outputWordsToUTF8File(String filePath, Hashtable<String, String> wordList) {
     try {
       Writer writer =
           new OutputStreamWriter(new FileOutputStream(filePath), StandardCharsets.UTF_16);
       PrintWriter printWriter = new PrintWriter(writer);
-      Collections.sort(wordList);
-      for (Object word : wordList) {
-        printWriter.println(word);
+      // Collections.sort(wordList);
+      // for (Object word : wordList) {
+      // printWriter.println(word);
+      // }
+      for (String word : wordList.keySet()) {
+        // String key = word.toString();
+        // String value = wordList.get(word).toString();
+        printWriter.println(word.toString() + " " + wordList.get(word).toString());
       }
       writer.close();
       printWriter.close();
